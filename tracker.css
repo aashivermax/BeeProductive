@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+::selection {
+    background-color: #ffeb3b;
+    color: black;
+}
+
+.header {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3em;
+    text-align: center;
+    color: #000000;
+}
+
+.home-link {
+    position: absolute;
+    top: 0%;
+    bottom: 30%;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url('images/hive-front.png');
+    background-size: cover;
+    margin: 20px auto;
+}
+body {
+    font-family: 'Ballet', sans-serif;
+    background-image: linear-gradient(to bottom, #FDFFC8, #FBFF88);
+    color: #333;
+    text-align: center;
+}
+.footer {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 1.2em;
+    text-align: center;
+    color: #000000;
+    margin-top: 20px;
+}
+
+.sub {
+    font-size: 30px;
+}
+
+.aboutBtn {
+    font-family: 'Bagel Fat One', cursive;
+    position: absolute;
+    top: -40px;
+    right: 10px;
+    font-size: 45px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.mainImg {
+    align-content: center;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    margin: 20px auto;
+}
