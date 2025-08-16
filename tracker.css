@@ -29,6 +29,7 @@ html, body {
     background-image: url('images/hive-front.png');
     background-size: cover;
     margin: 20px auto;
+    cursor: pointer;
 }
 body {
     font-family: 'Ballet', sans-serif;
@@ -64,4 +65,16 @@ body {
     height: auto;
     max-width: 600px;
     margin: 20px auto;
+}
+
+li {
+    font-family: 'Bagel Fat One', sans-serif;
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+    margin: 20px auto;
+    max-width: 600px;
+}
+li:hover {
+    color: #9c9025;
 }

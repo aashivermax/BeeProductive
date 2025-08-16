@@ -2,77 +2,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 ::selection {
     background-color: #ffeb3b;
     color: black;
 }
 
-.header {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3em;
-    text-align: center;
-    color: #000000;
-}
-
-.home-link {
-    position: absolute;
-    top: 0%;
-    bottom: 30%;
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-image: url('images/hive-front.png');
-    background-size: cover;
-    margin: 20px auto;
-}
 body {
     font-family: 'Ballet', sans-serif;
-    background-image: linear-gradient(to bottom, #FDFFC8, #FBFF88);
+    background: linear-gradient(to bottom, #FDFFC8, #FBFF88);
     color: #333;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-button {
-    position: absolute;
-    top: 114%;
-    left: 45.2%;
-    background-color: #FEBF3B;
-    font-family: 'Bagel Fat One', cursive;
-    color: black;
-    border: none;
-    padding: 10px 40px;
-    border-radius: 15px;
-    font-size: 20px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #fcb61f;
-}
-.footer {
-    font-family: 'Bagel Fat One', cursive;
-    font-size: 1.2em;
-    text-align: center;
-    color: #000000;
+
+.header {
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    color: #000;
     margin-top: 20px;
 }
 
 .sub {
-    font-size: 30px;
-}
-
-.aboutBtn {
+    font-size: 1.4rem;
     font-family: 'Bagel Fat One', cursive;
-    position: absolute;
-    top: -40px;
-    right: 10px;
-    font-size: 45px;
-    color: #000000;
-    cursor: pointer;
+    color: #4b4b4b;
+    margin-bottom: 20px;
 }
 
 .mainImg {
     align-content: center;
-    width: 100%;
-    height: auto;
-    max-width: 600px;
     margin: 20px auto;
+    display: block;
+    width: 80%;
+    max-width: 350px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Button styles */
+.button-container {
+    position: relative;
+    display: inline-block;
+}
+
+button {
+    background-color: #FEBF3B;
+    font-family: 'Bagel Fat One', cursive;
+    color: black;
+    border: none;
+    padding: 12px 50px;
+    border-radius: 25px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #fcb61f;
+    transform: scale(1.05);
+}
+
+/* About button "?" */
+.aboutBtn {
+    display: inline-block;
+    margin-left: 15px;
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 32px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.aboutBtn:hover {
+    background-color: #ffef9f;
+}
+
+
+.footer {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 1.1rem;
+    color: #000;
+    padding: 15px 0;
+}
+
+
+.home-link {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.home-link:hover {
+    transform: rotate(10deg) scale(1.05);
+}
+/* Additional styles for the about page */
+.description {
+    font-family: 'Bagel Fat One', sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin: 20px auto;
+    max-width: 600px;
 }

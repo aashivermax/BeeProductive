@@ -2,17 +2,28 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>🐝</title>
+    <title>🐝 Bee Productive</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <h1 class="header">Bee Productive</h1>
-    <h3 class="sub">Stick to your habits, honey!</h3>
 </head>
 <body>
-    <img class="mainImg" src="images/hive-front.png" alt="Hive Image" />
-    <img class="home-link" src="images/hive-front.png" alt="Hive Image Link" />
-    <p onclick="location.href='about.html'" class="aboutBtn">?</p>
-    <button id="startButton">Start</button>
-    <h3 class="footer">Made with ☕ + 💛 by Aashi</h3>
+    <header>
+        <h1 class="header">🐝 Bee Productive</h1>
+        <h3 class="sub">Stick to your habits, honey!</h3>
+    </header>
+
+    <main>
+        <img class="mainImg" src="images/hive-front.png" alt="Hive Image" />
+        <div class="button-container">
+            <button onclick="location.href='tracker.html'" id="startButton">Start Tracking</button>
+            <p onclick="location.href='about.html'" class="aboutBtn" title="About">?</p>
+        </div>
+    </main>
+
+    <footer>
+        <h3 class="footer">Made with ☕ + 💛 by Aashi</h3>
+    </footer>
+
+    <img onclick="location.href='index.html'" class="home-link" src="images/hive-front.png" alt="Hive Image Link" />
+    <script src="script.js"></script>
 </body>
 </html>

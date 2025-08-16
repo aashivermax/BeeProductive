@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <title>🐝</title>
     <link rel="stylesheet" href="tracker.css" />
-    <script src="tracker.js"></script>
-    <h1 class="header">✅ Habit List</h1>>
 </head>
 <body>
-    <img class="home-link" src="images/hive-front.png" alt="Hive Image Link" />
+    <h1 class="header">✅ Habit List</h1>
+
+    <div class="tracker-container">
+        <ul id="habitList"></ul>
+        <input type="text" id="habitInput" placeholder="Add a new habit..." />
+        <button id="addHabitButton">Add Habit</button>
+        <button id="clearHabitsButton">Clear Habits</button>
+    </div>  
+
+    <img onclick="location.href='index.html'" class="home-link" src="images/hive-front.png" alt="Hive Image Link" />
     <p onclick="location.href='about.html'" class="aboutBtn">?</p>
     <h3 class="footer">Made with ☕ + 💛 by Aashi</h3>
+
+    <!-- Load JS after HTML -->
+    <script src="tracker.js"></script>
 </body>
 </html>
