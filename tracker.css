@@ -3,10 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
 
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    background: linear-gradient(to bottom, #FDFFC8, #FBFF88);
+    background-attachment: fixed;
+    font-family: 'Ballet', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
 ::selection {
     background-color: #ffeb3b;
     color: black;
@@ -16,7 +25,125 @@ html, body {
     font-family: 'DM Serif Display', serif;
     font-size: 3em;
     text-align: center;
-    color: #000000;
+    color: #000;
+}
+
+.goal-section {
+    margin: 20px auto;
+}
+
+.goalSub {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-family: 'Bagel Fat One';
+}
+
+#goalInput {
+    width: 60px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px solid #ffeb3b;
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+}
+
+#goalInput:focus {
+    border-color: #fbc02d;
+    box-shadow: 0 0 8px #fff176;
+}
+
+.progress-wrapper {
+    width: 80%;
+    height: 15px;
+    background: #fffde7;
+    border: 2px solid #fdd835;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #fdd835;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.tracker-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 20px;
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+#habitInput {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ffeb3b;
+    outline: none;
+    font-size: 1em;
+}
+
+#habitInput:focus {
+    border-color: #fdd835;
+    box-shadow: 0 0 8px #fff176;
+}
+
+button {
+    background: #ffeb3b;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 1em;
+    transition: transform 0.2s ease, background 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #fbc02d;
+}
+
+li {
+    list-style: none;
+    background: #fffde7;
+    border: 2px solid #fdd835;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 12px;
+    transition: background 0.3s;
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    max-width: 600px;
+}
+
+li:hover {
+    background: #fff9c4;
+    transform: scale(1.02);
+    color: #9c9025;
+}
+
+li.done {
+    text-decoration: line-through;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #fdd835;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.compleated {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 1.2em;
+    color: #b38e17;
+    margin-top: 20px;
 }
 
 .home-link {
@@ -31,22 +158,13 @@ html, body {
     margin: 20px auto;
     cursor: pointer;
 }
-body {
-    font-family: 'Ballet', sans-serif;
-    background-image: linear-gradient(to bottom, #FDFFC8, #FBFF88);
-    color: #333;
-    text-align: center;
-}
+
 .footer {
     font-family: 'Bagel Fat One', cursive;
     font-size: 1.2em;
     text-align: center;
-    color: #000000;
+    color: #000;
     margin-top: 20px;
-}
-
-.sub {
-    font-size: 30px;
 }
 
 .aboutBtn {
@@ -55,26 +173,45 @@ body {
     top: -40px;
     right: 10px;
     font-size: 45px;
-    color: #000000;
+    color: #000;
     cursor: pointer;
 }
 
 .mainImg {
-    align-content: center;
-    width: 100%;
-    height: auto;
-    max-width: 600px;
+    display: block;
     margin: 20px auto;
+    width: 80%;
+    max-width: 300px;
+    animation: float 2s ease-in-out infinite;
 }
 
-li {
-    font-family: 'Bagel Fat One', sans-serif;
-    text-align: center;
-    font-size: 1em;
-    color: #333;
-    margin: 20px auto;
-    max-width: 600px;
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
 }
-li:hover {
-    color: #9c9025;
+
+#bee-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.bee {
+    position: absolute;
+    width: 90px; /* bigger bees */
+    height: 90px;
+    background-image: url('images/bee.png.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: floatBee linear infinite;
+}
+
+@keyframes floatBee {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }

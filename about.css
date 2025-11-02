@@ -9,86 +9,123 @@ html, body {
 }
 
 ::selection {
-    background-color: #ffeb3b;
-    color: black;
+  background-color: #ffeb3b;
+  color: black;
 }
 
-.header {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3em;
-    text-align: center;
-    color: #000000;
-}
-
-.home-link {
-    position: absolute;
-    top: 0%;
-    bottom: 30%;
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-image: url('images/hive-front.png');
-    background-size: cover;
-    margin: 20px auto;
-    cursor: pointer;
-}
 body {
-    font-family: 'Bagel Fat One', sans-serif;
-    background-image: linear-gradient(to bottom, #FDFFC8, #FBFF88);
-    color: #333;
-    text-align: center;
-}
-button {
-    position: absolute;
-    top: 59%;
-    left: 45%;
-    background-color: #FEBF3B;
-    font-family: 'Bagel Fat One', cursive;
-    color: black;
-    border: none;
-    padding: 10px 40px;
-    border-radius: 15px;
-    font-size: 20px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #fcb61f;
-}
-.footer {
-    font-family: 'Bagel Fat One', cursive;
-    font-size: 1.2em;
-    text-align: center;
-    color: #000000;
-    margin-top: 260px;
+  font-family: 'Bagel Fat One', sans-serif;
+  background: linear-gradient(to bottom, #FDFFC8, #FBFF88);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px;
 }
 
-.sub {
-    font-size: 30px;
+/* Container card */
+.about-container {
+  background: #fffbea;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  max-width: 650px;
+  margin-top: 40px;
+  animation: fadeIn 1s ease;
 }
 
-.aboutBtn {
-    font-family: 'Bagel Fat One', cursive;
-    position: absolute;
-    top: -40px;
-    right: 10px;
-    font-size: 45px;
-    color: #000000;
-    cursor: pointer;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.mainImg {
-    align-content: center;
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    margin: 20px auto;
+/* Title */
+.header {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 15px;
 }
 
+.highlight {
+  color: #f5a623;
+}
+
+/* Description */
 .description {
-    font-family: 'Bagel Fat One', sans-serif;
-    text-align: center;
-    font-size: 1em;
-    color: #333;
-    margin: 20px auto;
-    max-width: 600px;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Features list */
+.features h2 {
+  font-family: 'Bagel Fat One', cursive;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  background: #fff4c2;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  box-shadow: inset 0px 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.features li:hover {
+  transform: scale(1.05);
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  background: linear-gradient(145deg, #FFD93B, #FEBF3B);
+  font-family: 'Bagel Fat One', cursive;
+  color: black;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 25px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #fcb61f;
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  font-family: 'Bagel Fat One', cursive;
+  font-size: 1rem;
+  color: #000;
+  margin: 20px 0;
+}
+
+/* Home button hive */
+.home-link {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.home-link:hover {
+  transform: rotate(10deg) scale(1.05);
 }

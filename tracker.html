@@ -8,18 +8,31 @@
 <body>
     <h1 class="header">✅ Habit List</h1>
 
+    <div class="goal-section">
+        <label for="goalInput" class="goalSub">🎯 Today's Goal:</label>
+        <input type="number" id="goalInput" min="1" placeholder="Enter number of tasks" />
+        <p class="compleated">Tasks Completed: 0</p>
+        <div class="progress-wrapper">
+            <div id="progressBar"></div>
+        </div>
+    </div>
+
     <div class="tracker-container">
         <ul id="habitList"></ul>
         <input type="text" id="habitInput" placeholder="Add a new habit..." />
         <button id="addHabitButton">Add Habit</button>
         <button id="clearHabitsButton">Clear Habits</button>
-    </div>  
+    </div>
 
+    <div id="bee-container"></div>
+
+    <img class="mainImg" src="images/hive-front.png" alt="Hive Image" />
     <img onclick="location.href='index.html'" class="home-link" src="images/hive-front.png" alt="Hive Image Link" />
     <p onclick="location.href='about.html'" class="aboutBtn">?</p>
     <h3 class="footer">Made with ☕ + 💛 by Aashi</h3>
 
-    <!-- Load JS after HTML -->
+    <!-- JS -->
     <script src="tracker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>
 </html>
